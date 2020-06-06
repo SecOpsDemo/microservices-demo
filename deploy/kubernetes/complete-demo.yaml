@@ -246,26 +246,26 @@ spec:
 #     targetPort: 8079
 #   selector:
 #     name: front-end
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  annotations:
-    kubernetes.io/ingress.class: nginx
-  labels:
-    app: front-end
-    app.kubernetes.io/name: front-end
-  name: front-end
-  namespace: sock-shop
-spec:
-  rules:
-  - host: sockshop.soc1.bespin-mss.com
-    http:
-      paths:
-      - backend:
-          serviceName: front-end
-          servicePort: 80
-        path: /
+# ---
+# apiVersion: extensions/v1beta1
+# kind: Ingress
+# metadata:
+#   annotations:
+#     kubernetes.io/ingress.class: nginx
+#   labels:
+#     app: front-end
+#     app.kubernetes.io/name: front-end
+#   name: front-end
+#   namespace: sock-shop
+# spec:
+#   rules:
+#   - host: sockshop.soc1.bespin-mss.com
+#     http:
+#       paths:
+#       - backend:
+#           serviceName: front-end
+#           servicePort: 80
+#         path: /
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
